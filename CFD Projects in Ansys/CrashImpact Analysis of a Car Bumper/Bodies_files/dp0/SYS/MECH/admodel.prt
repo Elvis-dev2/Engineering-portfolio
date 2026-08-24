@@ -1,0 +1,639 @@
+ ANSYS
+      License feature : explicit_basic
+      License type    : Commercial
+
+
+
+       AAAAAA   UU    UU  TTTTTTTT   OOOOOO   DDDDDDD   YY    YY  NN    NN  TM
+      AA    AA  UU    UU     TT     OO    OO  DD    DD   YY  YY   NNN   NN
+      AA    AA  UU    UU     TT     OO    OO  DD    DD    YYYY    NNNN  NN
+      AAAAAAAA  UU    UU     TT     OO    OO  DD    DD     YY     NN NN NN
+      AA    AA  UU    UU     TT     OO    OO  DD    DD     YY     NN  NNNN
+      AA    AA  UU    UU     TT     OO    OO  DD    DD     YY     NN   NNN
+      AA    AA   UUUUUU      TT      OOOOOO   DDDDDDD      YY     NN    NN
+
+
+
+
+           Copyright (C) 2021, ANSYS, Inc.  All rights reserved.
+           Unauthorized use, distribution or duplication is prohibited.
+
+
+
+
+ 
+
+
+
+
+                                2024 R1
+                                   
+                 Point Releases and Patches installed:
+                                   
+                  Ansys, Inc. License Manager 2024 R1
+                            Viewer 2024 R1
+                           Discovery 2024 R1
+                          SpaceClaim 2024 R1
+                  Icepak (includes CFD-Post) 2024 R1
+                            Fluids 2024 R1
+                    Ansys Dynamic Reporting 2024 R1
+                         CFD-Post only 2024 R1
+                    CFX (includes CFD-Post) 2024 R1
+                            Chemkin 2024 R1
+                            EnSight 2024 R1
+                          FENSAP-ICE 2024 R1
+                  Fluent (includes CFD-Post) 2024 R1
+                 Polyflow (includes CFD-Post) 2024 R1
+                   Forte (includes EnSight) 2024 R1
+                           ICEM CFD 2024 R1
+                           TurboGrid 2024 R1
+                    ACIS Geometry Interface 2024 R1
+                  AutoCAD Geometry Interface 2024 R1
+              Catia, Version 4 Geometry Interface 2024 R1
+              Catia, Version 5 Geometry Interface 2024 R1
+              Catia, Version 6 Geometry Interface 2024 R1
+       Creo Elements/Direct Modeling Geometry Interface 2024 R1
+              Creo Parametric Geometry Interface 2024 R1
+                  Inventor Geometry Interface 2024 R1
+                   JTOpen Geometry Interface 2024 R1
+                     NX Geometry Interface 2024 R1
+                 Parasolid Geometry Interface  2024 R1
+                 Solid Edge Geometry Interface 2024 R1
+                 SOLIDWORKS Geometry Interface 2024 R1
+                           optiSLang 2024 R1
+           Remote Solve Manager Standalone Services 2024 R1
+                           Additive 2024 R1
+                             Aqwa 2024 R1
+                            Autodyn 2024 R1
+      Customization Files for User Programmable Features 2024 R1
+                            LS-DYNA 2024 R1
+                   Material Calibration App 2024 R1
+                      Mechanical Products 2024 R1
+                            Motion 2024 R1
+                           Sherlock 2024 R1
+                          Sound - SAS 2024 R1
+
+
+
+
+                            Solver :   EXPLICIT
+                             Build :   AUTODYN-3D Version 2024 R1              
+                Model File Version :   2024 R1
+                        Build Date :   20231127
+                 Current Date/Time :   20260824 14:21 (+0300GMT)
+                          Platform :   64 bit
+                              Beta :   FALSE
+                   User Subroutine :   FALSE
+               MPI Library Version :   Intel(R) MPI Library 2021.8 for Windows* OS
+
+
+
+
+
+                             IDENT :   admodel                                                                                                                                                                                                                                                         
+                             Title :                                           
+                       Description :                                                                                                                                                                                                                                                                   
+                       Start Cycle :            0
+                        Start Time :  0.00000E+00
+                         Precision :   Double
+
+
+
+
+   UNITS
+
+                            Length :   millimeter
+                              Mass :   milligram 
+                              Time :   millisec. 
+
+
+
+
+   SYMMETRY PLANES
+
+             Symmetry plane at X=0 :   No        
+                               Y=0 :   No        
+                               Z=0 :   No        
+
+
+
+
+   WRAPUP PARAMETERS
+
+                       Cycle Limit :     10000000
+                        Time Limit :  2.00000E+01
+     Maximum Energy Error Fraction :  1.00000E-01
+            Energy Reference Cycle :            0
+
+
+
+
+   MULTIPLE LOADSTEP DEFINITION
+
+     Step    Type             Step End Time   Static Damping   Convergence Tol.  Max. Iterations
+
+        1    Standard         2.0000E+01      0.0000E+00
+
+
+
+
+   LOADSTEP OUTPUT CONTROLS
+
+     Step    Results       Value      Restarts       Value      Trackers      Value
+
+        1    Global          -         Global          -         Global          -     
+
+
+
+
+   TIME STEP INFORMATION
+
+                 Minimum Time Step :  1.59026E-04
+                 Maximum Time Step :  1.00000E+08
+                 Initial Time Step :  1.59026E-03
+           Time Step Safety Factor :  9.00000E-01
+                      Mass scaling :  OFF
+
+
+
+
+   GRAVITATIONAL CONSTANTS
+
+             Global X Gravity :  0.00000E+00
+             Global Y Gravity :  0.00000E+00
+             Global Z Gravity :  0.00000E+00
+
+
+
+
+   GRAVITATIONAL AND ACCELERATION CONSTANTS - SUM AT START CYCLE
+
+             Total  X Acceleration :  0.00000E+00
+             Total  Y Acceleration :  0.00000E+00
+             Total  Z Acceleration :  0.00000E+00
+
+
+
+
+
+ 
+   DAMPING CONSTANTS
+
+                 Hourglass Damping :  1.00000E-01
+                    Static Damping : Per loadstep
+
+
+
+
+   ARTIFICIAL VISCOSITY
+
+               Quadratic Viscosity :  1.00000E+00
+                  Linear Viscosity :  2.00000E-01
+     Apply Lin.vis. in exp. for HE :  No
+     Art. vis. in structured shells:  Yes
+
+
+
+
+   GLOBAL OUTPUT CONTROLS
+
+                    Save Results On  : Time
+                    Increments :        1.00000E+00
+                    Save Restarts On  : Time
+                    Increments :        4.00000E+00
+                    Save Trackers On : Cycles
+                    Increments :        1.00000E+00
+
+
+
+
+   CUTOFF VALUES
+
+                   Velocity Cutoff :  1.00000E-06
+                 Soundspeed Cutoff :  1.00000E-06
+                     Radius Cutoff :  1.00000E-03
+                  Maximum Velocity :  1.00000E+10
+               Maximum Temperature :  1.01000E+20
+                    Join Tolerance :  5.00000E-02
+
+
+
+
+   METHOD OF CALCULATING CHARACTERISTIC ZONE DIMENSION
+
+                     Method to Use :  Diagonals
+
+
+
+
+   METHOD OF UPDATING LAG/ALE CELL DENSITIES AND COMPRESSIONS
+
+                     Method to Use :  Automatic
+
+
+
+
+   USER VARIABLES
+
+     Fortran name  User name     Restart  Rezone
+
+     VAR01         VAR.1         N        N
+     VAR02         VAR.2         N        N
+     VAR03         VAR.3         N        N
+     VAR04         VAR.4         N        N
+     VAR05         VAR.5         N        N
+     VAR06         VAR.6         N        N
+     VAR07         VAR.7         N        N
+     VAR08         VAR.8         N        N
+     VAR09         VAR.9         N        N
+     VAR10         VAR.10        N        N
+     VAR11         VAR.11        N        N
+     VAR12         VAR.12        N        N
+     VAR13         VAR.13        N        N
+     VAR14         VAR.14        N        N
+     VAR15         VAR.15        N        N
+     VAR16         VAR.16        N        N
+     VAR17         VAR.17        N        N
+     VAR18         VAR.18        N        N
+     VAR19         VAR.19        N        N
+     VAR20         VAR.20        N        N
+
+
+
+
+
+ 
+   GLOBAL MATERIAL SETTINGS
+
+      Shell yield converg. accuracy:  High
+
+
+
+
+   MATERIALS
+
+
+
+                         MATERIAL NAME: Structural Steel              
+
+
+                     Equation of State             Linear                                                                          
+
+          Reference density                      (g/cm3   ) 7.85000E+00
+          Bulk Modulus                           (kPa     ) 1.66667E+08
+          Reference Temperature                  (K       ) 2.95150E+02
+          Specific Heat                          (J/kgK   ) 4.34000E+02
+          Thermal Conductivity                   (J/mKs   ) 0.00000E+00
+
+
+                     Strength                      Elastic                                                                         
+
+          Shear Modulus                          (kPa     ) 7.69231E+07
+
+
+                     Failure                       None                                                                            
+
+
+
+                     Erosion                       None                                                                            
+
+
+
+                     Material Cutoffs              
+
+          Maximum Expansion                      (none    ) 1.00000E-01
+          Minimum Density Factor                 (none    ) 1.00000E-04
+          Minimum Density Factor (SPH)           (none    ) 2.00000E-01
+          Maximum Density Factor (SPH)           (none    ) 3.00000E+00
+          Minimum Soundspeed                     (m/s     ) 1.00000E-06
+          Maximum Soundspeed (SPH)               (m/s     ) 1.01000E+20
+          Maximum Temperature                    (K       ) 1.01000E+20
+
+
+           Reference: 
+                                                                                                                                                                                                                                                                
+
+
+           Notes: 
+                                                                                                                                                                                                                                                                
+
+
+
+
+
+
+
+
+
+ 
+     UNSTRUCTURED PARTS
+
+           PART                  NO. ELEMENTS         ELEMENT TYPE   ARTIFICIAL VISC.   HOURGLASS CONTROL     VISCOUS COEFF.   
+
+       1   SYS\wall                      1296            Hex 8            Yes           AD STANDARD            1.00000E-01
+       2   SYS\Bumper                     150            Hex 8            Yes           AD STANDARD            1.00000E-01
+
+           TOTAL NUMBER ELEMENTS:        1446
+           TOTAL NUMBER NODES:           2481
+
+
+
+
+     BODY CONTROL SPECIFICATION
+
+            
+
+            
+
+       SOLID PART(S)
+
+           PART                  TET INTEGRATION TYPE         HEX INTEGRATION TYPE         HOURGLASS DAMPING        VISCOUS COEFF.    STIFFNESS COEFF.      PUSO STAB.   
+
+       1  SYS\wall               N/A                                EXACT                  AD STANDARD               1.00000E-01         0.00000E+00        0.00000E+00
+       2  SYS\Bumper             N/A                                EXACT                  AD STANDARD               1.00000E-01         0.00000E+00        0.00000E+00
+            
+
+   PART ACTIVATION / DEACTIVATION TIMES
+
+           PART           ACTIVATION   DEACTIVATION
+                             TIME          TIME
+
+
+
+
+
+ 
+   EDITS
+
+       EDIT FREQUENCY
+       EDIT TYPE   HOW DONE          START           END     INCREMENT
+
+       SAVE        by times    0.00000E+00   2.00000E+01   4.00000E+00
+       GRIDVAR     Never     
+       ENERGYSUM   by times    0.00000E+00   2.00000E+01   4.00000E+00
+       CYCSUM      Never     
+       HISTORY     by cycles             0      10000000             1
+       USER        Never     
+       FIELD       Never     
+
+ 
+   INTERACTIONS
+
+          Using trajectory contact:  Yes
+                            Method:  Penalty
+                   Sliding Surface:  Discrete
+                     Penalty Force:  Harmonic Mass
+           Group Contact Treatment:  Lumped
+            Shell thickness factor:  0.00000E+00
+            Full SPH radius (beta):  No        
+                  Search Algorithm:  Cube            
+              Retention of Inertia:  Yes       
+                  Self-interaction:  Yes       
+             Self-interaction Tol.:  2.00000E-01
+
+     Part Name       I-range             J-range             K-range
+     SYS\wall                            Active
+     SYS\Bumper                          Active
+
+     No coefficients of friction have been specified
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CYCLE       0, TIME=  0.000E+00                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+Structural Steel                    3.179E+08 4.050E+07 0.000E+00 1.766E+09-3.532E+08 0.000E+00 0.000E+00
+---------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 0.000E+00 1.766E+09-3.532E+08 0.000E+00 0.000E+00
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+SYS\wall                            2.826E+08 3.600E+07 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+SYS\Bumper                          3.532E+07 4.500E+06 0.000E+00 1.766E+09-3.532E+08 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 0.000E+00 1.766E+09-3.532E+08 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.766E+09, X-MOM -3.532E+08, Y-MOM  0.000E+00, Z-MOM  0.000E+00
+EXTERNAL WORK   0.000E+00, X-IMP  0.000E+00, Y-IMP  0.000E+00, Z-IMP  0.000E+00
+CONTACT ENERGY  0.000E+00
+CURRENT ENERGY  1.766E+09, X-MOM -3.532E+08, Y-MOM  0.000E+00, Z-MOM  0.000E+00
+-------------------------------------------------------------------------------
+ERROR           0.000E+00         0.000E+00         0.000E+00         0.000E+00
+
+CYCLE    1260, TIME=  4.001E+00                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+Structural Steel                    3.179E+08 4.050E+07 3.790E+08 7.929E+08-3.532E+08 1.164E-04 4.279E+00
+---------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 3.790E+08 7.929E+08-3.532E+08 1.164E-04 4.279E+00
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+SYS\wall                            2.826E+08 3.600E+07 3.419E+08 7.636E+08-3.834E+08-3.850E+03-3.718E+06 1.903E+08 1.102E+09
+SYS\Bumper                          3.532E+07 4.500E+06 3.707E+07 2.926E+07 3.018E+07 3.850E+03 3.718E+06 2.506E+07-1.701E+09
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 3.790E+08 7.929E+08-3.532E+08 1.164E-04 4.279E+00 2.154E+08-5.986E+08
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.766E+09, X-MOM -3.532E+08, Y-MOM  0.000E+00, Z-MOM  0.000E+00
+EXTERNAL WORK   0.000E+00, X-IMP  7.536E-01, Y-IMP -5.022E-14, Z-IMP  4.279E+00
+CONTACT ENERGY -5.986E+08
+CURRENT ENERGY  1.172E+09, X-MOM -3.532E+08, Y-MOM  1.164E-04, Z-MOM  4.279E+00
+-------------------------------------------------------------------------------
+ERROR           4.236E+06        -1.462E-07         1.164E-04        -1.234E-08
+
+CYCLE    2518, TIME=  8.001E+00                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+Structural Steel                    3.179E+08 4.050E+07 4.014E+08 7.703E+08-3.532E+08 1.164E-04 4.279E+00
+---------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.014E+08 7.703E+08-3.532E+08 1.164E-04 4.279E+00
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+SYS\wall                            2.826E+08 3.600E+07 3.641E+08 7.413E+08-3.834E+08-3.850E+03-3.718E+06 2.339E+08 1.102E+09
+SYS\Bumper                          3.532E+07 4.500E+06 3.730E+07 2.903E+07 3.018E+07 3.850E+03 3.718E+06 2.522E+07-1.701E+09
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.014E+08 7.703E+08-3.532E+08 1.164E-04 4.279E+00 2.591E+08-5.986E+08
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.766E+09, X-MOM -3.532E+08, Y-MOM  0.000E+00, Z-MOM  0.000E+00
+EXTERNAL WORK   0.000E+00, X-IMP  7.536E-01, Y-IMP -5.022E-14, Z-IMP  4.279E+00
+CONTACT ENERGY -5.986E+08
+CURRENT ENERGY  1.172E+09, X-MOM -3.532E+08, Y-MOM  1.164E-04, Z-MOM  4.279E+00
+-------------------------------------------------------------------------------
+ERROR           4.075E+06        -2.696E-08         1.164E-04        -2.398E-08
+
+CYCLE    3776, TIME=  1.200E+01                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+Structural Steel                    3.179E+08 4.050E+07 4.289E+08 7.425E+08-3.532E+08 1.164E-04 4.279E+00
+---------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.289E+08 7.425E+08-3.532E+08 1.164E-04 4.279E+00
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+SYS\wall                            2.826E+08 3.600E+07 3.915E+08 7.136E+08-3.834E+08-3.850E+03-3.718E+06 2.628E+08 1.102E+09
+SYS\Bumper                          3.532E+07 4.500E+06 3.738E+07 2.894E+07 3.018E+07 3.850E+03 3.718E+06 2.527E+07-1.701E+09
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.289E+08 7.425E+08-3.532E+08 1.164E-04 4.279E+00 2.881E+08-5.986E+08
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.766E+09, X-MOM -3.532E+08, Y-MOM  0.000E+00, Z-MOM  0.000E+00
+EXTERNAL WORK   0.000E+00, X-IMP  7.536E-01, Y-IMP -5.022E-14, Z-IMP  4.279E+00
+CONTACT ENERGY -5.986E+08
+CURRENT ENERGY  1.171E+09, X-MOM -3.532E+08, Y-MOM  1.164E-04, Z-MOM  4.279E+00
+-------------------------------------------------------------------------------
+ERROR           3.789E+06         2.115E-07         1.164E-04        -2.910E-08
+
+CYCLE    5034, TIME=  1.600E+01                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+Structural Steel                    3.179E+08 4.050E+07 4.477E+08 7.235E+08-3.532E+08 1.164E-04 4.279E+00
+---------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.477E+08 7.235E+08-3.532E+08 1.164E-04 4.279E+00
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+SYS\wall                            2.826E+08 3.600E+07 4.104E+08 6.946E+08-3.834E+08-3.850E+03-3.718E+06 2.843E+08 1.102E+09
+SYS\Bumper                          3.532E+07 4.500E+06 3.735E+07 2.897E+07 3.018E+07 3.850E+03 3.718E+06 2.530E+07-1.701E+09
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.477E+08 7.235E+08-3.532E+08 1.164E-04 4.279E+00 3.096E+08-5.986E+08
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.766E+09, X-MOM -3.532E+08, Y-MOM  0.000E+00, Z-MOM  0.000E+00
+EXTERNAL WORK   0.000E+00, X-IMP  7.536E-01, Y-IMP -5.022E-14, Z-IMP  4.279E+00
+CONTACT ENERGY -5.986E+08
+CURRENT ENERGY  1.171E+09, X-MOM -3.532E+08, Y-MOM  1.164E-04, Z-MOM  4.279E+00
+-------------------------------------------------------------------------------
+ERROR           3.646E+06        -2.696E-08         1.164E-04        -3.562E-08
+
+CYCLE    6292, TIME=  2.000E+01                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+Structural Steel                    3.179E+08 4.050E+07 4.360E+08 7.353E+08-3.532E+08 1.164E-04 4.279E+00
+---------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.360E+08 7.353E+08-3.532E+08 1.164E-04 4.279E+00
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+SYS\wall                            2.826E+08 3.600E+07 3.986E+08 7.063E+08-3.834E+08-3.850E+03-3.718E+06 3.009E+08 1.102E+09
+SYS\Bumper                          3.532E+07 4.500E+06 3.739E+07 2.894E+07 3.018E+07 3.850E+03 3.718E+06 2.533E+07-1.701E+09
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              3.179E+08 4.050E+07 4.360E+08 7.353E+08-3.532E+08 1.164E-04 4.279E+00 3.262E+08-5.986E+08
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.766E+09, X-MOM -3.532E+08, Y-MOM  0.000E+00, Z-MOM  0.000E+00
+EXTERNAL WORK   0.000E+00, X-IMP  7.536E-01, Y-IMP -5.022E-14, Z-IMP  4.279E+00
+CONTACT ENERGY -5.986E+08
+CURRENT ENERGY  1.171E+09, X-MOM -3.532E+08, Y-MOM  1.164E-04, Z-MOM  4.279E+00
+-------------------------------------------------------------------------------
+ERROR           3.617E+06         9.225E-08         1.164E-04        -4.214E-08
+ 
+ 
+SIMULATION ELAPSED TIME SUMMARY
+ 
+EXECUTION FROM CYCLE        0 TO     6292
+ELAPSED RUN TIME IN SOLVER  =      3.41250E-01 Minutes
+ELAPSED RUN TIME IN CONTACT =      1.15217E-01 Minutes
+ELAPSED RUN TIME IN EDITS   =      3.75000E-02 Minutes
+TOTAL ELAPSED RUN TIME      =      3.78750E-01 Minutes
+ 
+AUTODYN RAN OVER     4 WORKERS
+AUTODYN RAN USING DECOMPOSITION AUTO    
+
+AUTODYN RAN ON THE FOLLOWING MACHINES;
+
+-----------------------------------------------------------------------
+|    MACHINE NAME                  |     MASTER     |    WORKER(S)    |
+-----------------------------------------------------------------------
+|    ELVIS                         |        1       |        4        |
+-----------------------------------------------------------------------
+
