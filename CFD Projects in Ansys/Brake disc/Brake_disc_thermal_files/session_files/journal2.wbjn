@@ -1,0 +1,36 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+system1 = GetSystem(Name="SYS")
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+setup1.Edit()
+template1 = GetTemplate(
+    TemplateName="Transient Thermal",
+    Solver="ANSYS")
+system2 = template1.CreateSystem()
+system1.Delete()
+geometry1 = system2.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+modelComponent1 = system2.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system2.GetContainer(ComponentName="Model")
+model1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+system2.Delete()
+template2 = GetTemplate(
+    TemplateName="Modal",
+    Solver="ANSYS")
+system3 = template2.CreateSystem()
+geometry2 = system3.GetContainer(ComponentName="Geometry")
+geometry2.Edit(IsSpaceClaimGeometry=True)
+Save(Overwrite=True)
+modelComponent2 = system3.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system3.GetContainer(ComponentName="Model")
+model2.Edit()
+Save(Overwrite=True)

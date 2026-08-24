@@ -1,0 +1,1720 @@
+﻿<!DOCTYPE html>
+<html data-color-mode="light" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - ADR</title>
+    
+    
+    
+    <link rel="shortcut icon" href="./media/favicon.ico"/>
+
+    
+    <link rel="stylesheet" type="text/css" href="./media/fontawesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/solid.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="./media/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/bootstrap-select.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/bootstrap-tagsinput.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/bootstrap-callout.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/jquery.loading.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/noty.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/site.css"/>
+    <link rel="stylesheet" type="text/css" href="./media/dark-site.css"/>
+
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          jax: ["input/TeX","input/MathML","input/AsciiMath"],
+          extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js"],
+          TeX: { extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"] },
+          tex2jax: { inlineMath:[['$','$'],["\\(","\\)"]], displayMath:[['$$','$$'],["\\[","\\]"]], processEscapes:true, processEnvironments:true},
+          asciimath2jax: { delimiters:[['`','`']] },
+
+        });
+    </script>
+    <script src="./media/MathJax.js"></script>
+    <script src="./media/jquery-3.4.1.min.js"></script>
+    <script src="./media/datatables.min.js"></script>
+
+
+    <script src="./ansys/nexus/utils/js-unzip.js"></script>
+    <script src="./ansys/nexus/utils/js-inflate.js"></script>
+    <script src="./ansys/nexus/ANSYSViewer_min.js"></script>
+
+    
+    <script>$(document).ready(function () {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    });</script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="./media/bootstrap-slider.min.css"/>
+    
+        
+        <script src="./media/plotly.min.js"></script>
+    
+    <script src="./ansys/nexus/viewer-loader.js"></script>
+    <script src="./media/geotiff.js"></script>
+    <script src="./media/geotiff_nexus.js"></script>
+
+    
+</head>
+
+    <body style="padding: 0;">
+
+<div class="body-content m-1">
+    
+    <div id="report_root" class="container-fluid w-100" style="padding: 0; margin: 0;">
+        <div  nexus_template="ae606e33-9d4b-11f1-b553-60dd8e2a1669"><br><div class="container-fluid mx-auto" id="ae606e33-9d4b-11f1-b553-60dd8e2a1669" >
+<div  nexus_template="c3ca1d35-9d4b-11f1-9363-60dd8e2a1669"><br><div class="card" id="c3ca1d35-9d4b-11f1-9363-60dd8e2a1669_36" >
+<div class="card-body" id="c3ca1d35-9d4b-11f1-9363-60dd8e2a1669_36-card-body" >
+<div  nexus_template="c4b3e890-9d4b-11f1-9603-60dd8e2a1669"><br><div class="container-fluid mx-auto" id="c4b3e890-9d4b-11f1-9603-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto">
+
+    <img src="./media/b07ef36b-9d4b-11f1-a814-60dd8e2a1669_image.png"
+            
+                class="img-fluid" style="margin: 0 auto; display:flex; justify-content:center;" 
+            
+         alt="Image file not found">
+</div></div></div>
+</div><div  nexus_template="c59dea3e-9d4b-11f1-935d-60dd8e2a1669"><br><div class="container-fluid mx-auto" id="c59dea3e-9d4b-11f1-935d-60dd8e2a1669" >
+<h1 style='text-align:center;'>Ansys Fluent Simulation Report</h1>
+</div>
+</div><div  nexus_template="c8f20fa2-9d4b-11f1-bf02-60dd8e2a1669" style=" page-break-inside: avoid;"><br><div class="container-fluid mx-auto" id="c8f20fa2-9d4b-11f1-bf02-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_79157aaff6504241b0e84374ea7caea0" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead style="visibility: collapse;">
+  <tr>
+   <th></th>
+   <th></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Analyst</th>
+   <td  data-order="Hp">Hp</td>
+  </tr>
+  <tr>
+   <th>Date</th>
+   <td  data-order="8/21/2026 01:33 PM">8/21/2026 01:33 PM</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "th" }, {"className": "text-center", "targets": 1, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"ordering": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_79157aaff6504241b0e84374ea7caea0').DataTable(options);
+
+    const const_data_79157aaff6504241b0e84374ea7caea0 = table.rows().data();
+
+    const row_tags_79157aaff6504241b0e84374ea7caea0 = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_79157aaff6504241b0e84374ea7caea0 = $('#table_79157aaff6504241b0e84374ea7caea0_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_79157aaff6504241b0e84374ea7caea0 = document.getElementById('table_79157aaff6504241b0e84374ea7caea0_wrapper');
+
+    setWidth('79157aaff6504241b0e84374ea7caea0');
+
+    table_79157aaff6504241b0e84374ea7caea0.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_79157aaff6504241b0e84374ea7caea0);
+        table.columns().visible(true);
+
+        $('#table_79157aaff6504241b0e84374ea7caea0').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_79157aaff6504241b0e84374ea7caea0.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_79157aaff6504241b0e84374ea7caea0.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_79157aaff6504241b0e84374ea7caea0[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('79157aaff6504241b0e84374ea7caea0');
+    });
+});
+
+</script></div></div></div>
+</div><div  nexus_template="cb4ea05b-9d4b-11f1-94fc-60dd8e2a1669"><br><h3>Table of Contents</h3><div class="container-fluid mx-auto" id="cb4ea05b-9d4b-11f1-94fc-60dd8e2a1669" >
+</div>
+<div id='TOC_item_list_37'></div></div></div>
+</div>
+</div><div  nexus_template="cd63edf6-9d4b-11f1-ba7c-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_1"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#cd63edf6-9d4b-11f1-ba7c-60dd8e2a1669_38-card-body"></span>
+<div class="card" id="cd63edf6-9d4b-11f1-ba7c-60dd8e2a1669_38" >
+<div class="card-header"><h2>System Information</h2></div>
+<div class="card-body" id="cd63edf6-9d4b-11f1-ba7c-60dd8e2a1669_38-card-body" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_742199c85f15475ea7b13d6fe4b78f68" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead style="visibility: collapse;">
+  <tr>
+   <th></th>
+   <th></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Application</th>
+   <td  data-order="Fluent">Fluent</td>
+  </tr>
+  <tr>
+   <th>Settings</th>
+   <td  data-order="2d, pressure-based, standard k-epsilon">2d, pressure-based, standard k-epsilon</td>
+  </tr>
+  <tr>
+   <th>Version</th>
+   <td  data-order="24.1.0-10184">24.1.0-10184</td>
+  </tr>
+  <tr>
+   <th>Source Revision</th>
+   <td  data-order="5b3f9fb3c8">5b3f9fb3c8</td>
+  </tr>
+  <tr>
+   <th>Build Time</th>
+   <td  data-order="Nov 22 2023 10:29:19 EST">Nov 22 2023 10:29:19 EST</td>
+  </tr>
+  <tr>
+   <th>CPU</th>
+   <td  data-order="11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz">11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz</td>
+  </tr>
+  <tr>
+   <th>OS</th>
+   <td  data-order="Windows">Windows</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "th" }, {"className": "text-center", "targets": 1, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"ordering": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_742199c85f15475ea7b13d6fe4b78f68').DataTable(options);
+
+    const const_data_742199c85f15475ea7b13d6fe4b78f68 = table.rows().data();
+
+    const row_tags_742199c85f15475ea7b13d6fe4b78f68 = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_742199c85f15475ea7b13d6fe4b78f68 = $('#table_742199c85f15475ea7b13d6fe4b78f68_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_742199c85f15475ea7b13d6fe4b78f68 = document.getElementById('table_742199c85f15475ea7b13d6fe4b78f68_wrapper');
+
+    setWidth('742199c85f15475ea7b13d6fe4b78f68');
+
+    table_742199c85f15475ea7b13d6fe4b78f68.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_742199c85f15475ea7b13d6fe4b78f68);
+        table.columns().visible(true);
+
+        $('#table_742199c85f15475ea7b13d6fe4b78f68').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_742199c85f15475ea7b13d6fe4b78f68.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_742199c85f15475ea7b13d6fe4b78f68.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_742199c85f15475ea7b13d6fe4b78f68[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('742199c85f15475ea7b13d6fe4b78f68');
+    });
+});
+
+</script></div></div></div>
+</div>
+</div><div  nexus_template="cfd15c66-9d4b-11f1-ae63-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_2"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#cfd15c66-9d4b-11f1-ae63-60dd8e2a1669_39-card-body"></span>
+<div class="card" id="cfd15c66-9d4b-11f1-ae63-60dd8e2a1669_39" >
+<div class="card-header"><h2>Geometry and Mesh</h2></div>
+<div class="card-body" id="cfd15c66-9d4b-11f1-ae63-60dd8e2a1669_39-card-body" >
+<div  nexus_template="d215fcec-9d4b-11f1-a070-60dd8e2a1669"><a id="TOC_item_tgt_3"></a><br><h2>Mesh Size</h2><div class="container-fluid mx-auto" id="d215fcec-9d4b-11f1-a070-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_d33a020dbe144dd8968359dd96ccd5e0" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead>
+  <tr>
+   <th>Cells</th>
+   <th>Faces</th>
+   <th>Nodes</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td  data-order="278">278</td>
+   <td  data-order="591">591</td>
+   <td  data-order="313">313</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "td" }, {"className": "text-center", "targets": 1, "cellType": "td" }, {"className": "text-center", "targets": 2, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_d33a020dbe144dd8968359dd96ccd5e0').DataTable(options);
+
+    const const_data_d33a020dbe144dd8968359dd96ccd5e0 = table.rows().data();
+
+    const row_tags_d33a020dbe144dd8968359dd96ccd5e0 = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_d33a020dbe144dd8968359dd96ccd5e0 = $('#table_d33a020dbe144dd8968359dd96ccd5e0_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_d33a020dbe144dd8968359dd96ccd5e0 = document.getElementById('table_d33a020dbe144dd8968359dd96ccd5e0_wrapper');
+
+    setWidth('d33a020dbe144dd8968359dd96ccd5e0');
+
+    table_d33a020dbe144dd8968359dd96ccd5e0.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_d33a020dbe144dd8968359dd96ccd5e0);
+        table.columns().visible(true);
+
+        $('#table_d33a020dbe144dd8968359dd96ccd5e0').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_d33a020dbe144dd8968359dd96ccd5e0.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_d33a020dbe144dd8968359dd96ccd5e0.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_d33a020dbe144dd8968359dd96ccd5e0[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('d33a020dbe144dd8968359dd96ccd5e0');
+    });
+});
+
+</script></div></div></div>
+</div><div  nexus_template="d4450eac-9d4b-11f1-b5ef-60dd8e2a1669"><a id="TOC_item_tgt_4"></a><br><h2>Mesh Quality</h2><div class="container-fluid mx-auto" id="d4450eac-9d4b-11f1-b5ef-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_0b86e8abc2bc4dab81547377a183b10e" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Min Orthogonal Quality</th>
+   <th>Max Aspect Ratio</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td  data-order="fff_surface">fff_surface</td>
+   <td  data-order="Mixed Cell">Mixed Cell</td>
+   <td  data-order="0.7504738">0.7504738</td>
+   <td  data-order="2.9368265">2.9368265</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "td" }, {"className": "text-center", "targets": 1, "cellType": "td" }, {"className": "text-center", "targets": 2, "cellType": "td" }, {"className": "text-center", "targets": 3, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_0b86e8abc2bc4dab81547377a183b10e').DataTable(options);
+
+    const const_data_0b86e8abc2bc4dab81547377a183b10e = table.rows().data();
+
+    const row_tags_0b86e8abc2bc4dab81547377a183b10e = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_0b86e8abc2bc4dab81547377a183b10e = $('#table_0b86e8abc2bc4dab81547377a183b10e_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_0b86e8abc2bc4dab81547377a183b10e = document.getElementById('table_0b86e8abc2bc4dab81547377a183b10e_wrapper');
+
+    setWidth('0b86e8abc2bc4dab81547377a183b10e');
+
+    table_0b86e8abc2bc4dab81547377a183b10e.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_0b86e8abc2bc4dab81547377a183b10e);
+        table.columns().visible(true);
+
+        $('#table_0b86e8abc2bc4dab81547377a183b10e').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_0b86e8abc2bc4dab81547377a183b10e.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_0b86e8abc2bc4dab81547377a183b10e.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_0b86e8abc2bc4dab81547377a183b10e[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('0b86e8abc2bc4dab81547377a183b10e');
+    });
+});
+
+</script></div></div></div>
+</div><div  nexus_template="d6749348-9d4b-11f1-a3ac-60dd8e2a1669"><a id="TOC_item_tgt_5"></a><br><h2>Orthogonal Quality</h2><div class="container-fluid mx-auto" id="d6749348-9d4b-11f1-a3ac-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto">
+
+    <img src="./media/b84dc8a7-9d4b-11f1-8352-60dd8e2a1669_image.png"
+            
+                class="img-fluid" style="margin: 0 auto; display:flex; justify-content:center;" 
+            
+         alt="Image file not found">
+</div></div></div>
+</div></div>
+</div>
+</div><div  nexus_template="d89987bd-9d4b-11f1-9fe8-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_6"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#d89987bd-9d4b-11f1-9fe8-60dd8e2a1669_40-card-body"></span>
+<div class="card" id="d89987bd-9d4b-11f1-9fe8-60dd8e2a1669_40" >
+<div class="card-header"><h2>Simulation Setup</h2></div>
+<div class="card-body" id="d89987bd-9d4b-11f1-9fe8-60dd8e2a1669_40-card-body" >
+<div  nexus_template="dae89b4e-9d4b-11f1-afa7-60dd8e2a1669"><a id="TOC_item_tgt_7"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#dae89b4e-9d4b-11f1-afa7-60dd8e2a1669_41-card-body"></span>
+<div class="card" id="dae89b4e-9d4b-11f1-afa7-60dd8e2a1669_41" >
+<div class="card-header"><h2>Physics</h2></div>
+<div class="card-body" id="dae89b4e-9d4b-11f1-afa7-60dd8e2a1669_41-card-body" >
+<div  nexus_template="dd29eb49-9d4b-11f1-bafc-60dd8e2a1669"><a id="TOC_item_tgt_8"></a><br><h2>Models</h2><div class="container-fluid mx-auto" id="dd29eb49-9d4b-11f1-bafc-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_486540c5f16345b6863fd5eceb1db2ef" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead>
+  <tr>
+   <th>Model</th>
+   <th>Settings</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td  data-order="Space">Space</td>
+   <td  data-order="2D">2D</td>
+  </tr>
+  <tr>
+   <td  data-order="Time">Time</td>
+   <td  data-order="Steady">Steady</td>
+  </tr>
+  <tr>
+   <td  data-order="Viscous">Viscous</td>
+   <td  data-order="Standard k-epsilon turbulence model">Standard k-epsilon turbulence model</td>
+  </tr>
+  <tr>
+   <td  data-order="Wall Treatment">Wall Treatment</td>
+   <td  data-order="Standard Wall Functions">Standard Wall Functions</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "td" }, {"className": "text-center", "targets": 1, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_486540c5f16345b6863fd5eceb1db2ef').DataTable(options);
+
+    const const_data_486540c5f16345b6863fd5eceb1db2ef = table.rows().data();
+
+    const row_tags_486540c5f16345b6863fd5eceb1db2ef = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_486540c5f16345b6863fd5eceb1db2ef = $('#table_486540c5f16345b6863fd5eceb1db2ef_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_486540c5f16345b6863fd5eceb1db2ef = document.getElementById('table_486540c5f16345b6863fd5eceb1db2ef_wrapper');
+
+    setWidth('486540c5f16345b6863fd5eceb1db2ef');
+
+    table_486540c5f16345b6863fd5eceb1db2ef.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_486540c5f16345b6863fd5eceb1db2ef);
+        table.columns().visible(true);
+
+        $('#table_486540c5f16345b6863fd5eceb1db2ef').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_486540c5f16345b6863fd5eceb1db2ef.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_486540c5f16345b6863fd5eceb1db2ef.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_486540c5f16345b6863fd5eceb1db2ef[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('486540c5f16345b6863fd5eceb1db2ef');
+    });
+});
+
+</script></div></div></div>
+</div><div  nexus_template="df76f64f-9d4b-11f1-a031-60dd8e2a1669"><a id="TOC_item_tgt_9"></a><br><h2>Material Properties</h2><div class="container-fluid mx-auto" id="df76f64f-9d4b-11f1-a031-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><div class="card-header">
+  <span class="btn-group" role="group">
+      <button type="button" class="tree-expand-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_66bb1dc2529b4211ae51da6b782bd7de"><i class="fas fa-plus"></i>
+      <button type="button" class="tree-collapse-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_66bb1dc2529b4211ae51da6b782bd7de"><i class="fas fa-minus"></i>
+  </span>
+</div>
+<div style="display:block;overflow-x:auto;white-space:nowrap;"><table id='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='table tree table-bordered table-sm tree-fit table-striped' style='margin:0;border:0;padding:0;'>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-1' data-parent='0' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_66bb1dc2529b4211ae51da6b782bd7de-1" style='cursor:pointer'></span>Fluid</td><td ></td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-2' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-1' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_66bb1dc2529b4211ae51da6b782bd7de-2" style='cursor:pointer'></span>air</td><td ></td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-3' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-2' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Density</td><td >1.225 kg/m^3</td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-4' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-2' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Cp (Specific Heat)</td><td >1006.43 J/(kg K)</td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-5' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-2' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Thermal Conductivity</td><td >0.0242 W/(m K)</td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-6' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-2' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Viscosity</td><td >1.7894e-05 kg/(m s)</td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-7' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-2' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Molecular Weight</td><td >28.966 kg/kmol</td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-8' data-parent='0' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_66bb1dc2529b4211ae51da6b782bd7de-8" style='cursor:pointer'></span>Solid</td><td ></td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-9' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-8' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_66bb1dc2529b4211ae51da6b782bd7de-9" style='cursor:pointer'></span>aluminum</td><td ></td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-10' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-9' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Density</td><td >2719 kg/m^3</td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-11' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-9' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Cp (Specific Heat)</td><td >871 J/(kg K)</td></tr>
+<tr id='treenode_66bb1dc2529b4211ae51da6b782bd7de-12' data-parent='treenode_66bb1dc2529b4211ae51da6b782bd7de-9' data-tree='treeroot_66bb1dc2529b4211ae51da6b782bd7de' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Thermal Conductivity</td><td >202.4 W/(m K)</td></tr>
+</table>
+</div>
+</div></div></div>
+</div><div  nexus_template="e2068eba-9d4b-11f1-bc17-60dd8e2a1669"><a id="TOC_item_tgt_10"></a><br><h2><a class="nexus-anchor" style="position:relative;top:-0.5em;" id="CellZones"></a>Cell Zone Conditions</h2><div class="container-fluid mx-auto" id="e2068eba-9d4b-11f1-bc17-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><div class="card-header">
+  <span class="btn-group" role="group">
+      <button type="button" class="tree-expand-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_0382d062c7b34629aff832ba86b90194"><i class="fas fa-plus"></i>
+      <button type="button" class="tree-collapse-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_0382d062c7b34629aff832ba86b90194"><i class="fas fa-minus"></i>
+  </span>
+</div>
+<div style="display:block;overflow-x:auto;white-space:nowrap;"><table id='treeroot_0382d062c7b34629aff832ba86b90194' class='table tree table-bordered table-sm tree-fit table-striped' style='margin:0;border:0;padding:0;'>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-1' data-parent='0' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_0382d062c7b34629aff832ba86b90194-1" style='cursor:pointer'></span>Fluid</td><td ></td></tr>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-2' data-parent='treenode_0382d062c7b34629aff832ba86b90194-1' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_0382d062c7b34629aff832ba86b90194-2" style='cursor:pointer'></span>fff_surface</td><td ></td></tr>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-3' data-parent='treenode_0382d062c7b34629aff832ba86b90194-2' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Material Name</td><td >air</td></tr>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-4' data-parent='treenode_0382d062c7b34629aff832ba86b90194-2' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Specify source terms?</td><td >no</td></tr>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-5' data-parent='treenode_0382d062c7b34629aff832ba86b90194-2' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Specify fixed values?</td><td >no</td></tr>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-6' data-parent='treenode_0382d062c7b34629aff832ba86b90194-2' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Frame Motion?</td><td >no</td></tr>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-7' data-parent='treenode_0382d062c7b34629aff832ba86b90194-2' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Laminar zone?</td><td >no</td></tr>
+<tr id='treenode_0382d062c7b34629aff832ba86b90194-8' data-parent='treenode_0382d062c7b34629aff832ba86b90194-2' data-tree='treeroot_0382d062c7b34629aff832ba86b90194' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Porous zone?</td><td >no</td></tr>
+</table>
+</div>
+</div></div></div>
+</div><div  nexus_template="e43c15ff-9d4b-11f1-bd9a-60dd8e2a1669"><a id="TOC_item_tgt_11"></a><br><h2><a class="nexus-anchor" style="position:relative;top:-0.5em;" id="BoundaryZones"></a>Boundary Conditions</h2><div class="container-fluid mx-auto" id="e43c15ff-9d4b-11f1-bd9a-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><div class="card-header">
+  <span class="btn-group" role="group">
+      <button type="button" class="tree-expand-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_394ac9c3a48a4f66ab613908e7cd9e9a"><i class="fas fa-plus"></i>
+      <button type="button" class="tree-collapse-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_394ac9c3a48a4f66ab613908e7cd9e9a"><i class="fas fa-minus"></i>
+  </span>
+</div>
+<div style="display:block;overflow-x:auto;white-space:nowrap;"><table id='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='table tree table-bordered table-sm tree-fit table-striped' style='margin:0;border:0;padding:0;'>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-1' data-parent='0' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-1" style='cursor:pointer'></span>Inlet</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-1' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2" style='cursor:pointer'></span>inlet</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-3' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Velocity Specification Method</td><td >Magnitude, Normal to Boundary</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-4' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Reference Frame</td><td >Absolute</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-5' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Velocity Magnitude [m/s]</td><td >10</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-6' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Supersonic/Initial Gauge Pressure [Pa]</td><td >0</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-7' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Specification Method</td><td >Intensity and Viscosity Ratio</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-8' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Intensity [%]</td><td >5</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-9' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-2' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Viscosity Ratio</td><td >10</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-10' data-parent='0' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-10" style='cursor:pointer'></span>Outlet</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-10' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11" style='cursor:pointer'></span>outlet</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-12' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Backflow Reference Frame</td><td >Absolute</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-13' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Gauge Pressure [Pa]</td><td >0</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-14' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Pressure Profile Multiplier</td><td >1</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-15' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Backflow Direction Specification Method</td><td >Normal to Boundary</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-16' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Specification Method</td><td >Intensity and Viscosity Ratio</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-17' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Backflow Turbulent Intensity [%]</td><td >5</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-18' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Backflow Turbulent Viscosity Ratio</td><td >10</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-19' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Backflow Pressure Specification</td><td >Total Pressure</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-20' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Build artificial walls to prevent reverse flow?</td><td >no</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-21' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Average Pressure Specification?</td><td >no</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-22' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-11' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Specify targeted mass flow rate</td><td >no</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-23' data-parent='0' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-23" style='cursor:pointer'></span>Wall</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-24' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-23' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-24" style='cursor:pointer'></span>cylinder_wall</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-25' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-24' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Motion</td><td >Stationary Wall</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-26' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-24' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Shear Boundary Condition</td><td >No Slip</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-27' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-24' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Roughness Height [m]</td><td >0</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-28' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-24' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Roughness Constant</td><td >0.5</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-29' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-23' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-29" style='cursor:pointer'></span>bottom</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-30' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-29' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Motion</td><td >Stationary Wall</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-31' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-29' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Shear Boundary Condition</td><td >No Slip</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-32' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-29' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Roughness Height [m]</td><td >0</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-33' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-29' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Roughness Constant</td><td >0.5</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-34' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-23' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-parent tree-collapsed' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_394ac9c3a48a4f66ab613908e7cd9e9a-34" style='cursor:pointer'></span>top</td><td ></td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-35' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-34' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Motion</td><td >Stationary Wall</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-36' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-34' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Shear Boundary Condition</td><td >No Slip</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-37' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-34' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Roughness Height [m]</td><td >0</td></tr>
+<tr id='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-38' data-parent='treenode_394ac9c3a48a4f66ab613908e7cd9e9a-34' data-tree='treeroot_394ac9c3a48a4f66ab613908e7cd9e9a' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Wall Roughness Constant</td><td >0.5</td></tr>
+</table>
+</div>
+</div></div></div>
+</div><div  nexus_template="e66fc30f-9d4b-11f1-a8f2-60dd8e2a1669"><a id="TOC_item_tgt_12"></a><br><h2>Reference Values</h2><div class="container-fluid mx-auto" id="e66fc30f-9d4b-11f1-a8f2-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_3a17abf018974b46960f61a65ecb6b04" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead style="visibility: collapse;">
+  <tr>
+   <th></th>
+   <th></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Area</th>
+   <td  data-order="1 m^2">1 m^2</td>
+  </tr>
+  <tr>
+   <th>Density</th>
+   <td  data-order="1.225 kg/m^3">1.225 kg/m^3</td>
+  </tr>
+  <tr>
+   <th>Depth</th>
+   <td  data-order="1 m">1 m</td>
+  </tr>
+  <tr>
+   <th>Enthalpy</th>
+   <td  data-order="0 J/kg">0 J/kg</td>
+  </tr>
+  <tr>
+   <th>Length</th>
+   <td  data-order="1 m">1 m</td>
+  </tr>
+  <tr>
+   <th>Pressure</th>
+   <td  data-order="0 Pa">0 Pa</td>
+  </tr>
+  <tr>
+   <th>Temperature</th>
+   <td  data-order="288.16 K">288.16 K</td>
+  </tr>
+  <tr>
+   <th>Velocity</th>
+   <td  data-order="1 m/s">1 m/s</td>
+  </tr>
+  <tr>
+   <th>Viscosity</th>
+   <td  data-order="1.7894e-05 kg/(m s)">1.7894e-05 kg/(m s)</td>
+  </tr>
+  <tr>
+   <th>Ratio of Specific Heats</th>
+   <td  data-order="1.4">1.4</td>
+  </tr>
+  <tr>
+   <th>Yplus for Heat Tran. Coef.</th>
+   <td  data-order="300">300</td>
+  </tr>
+  <tr>
+   <th>Reference Zone</th>
+   <td  data-order="fff_surface">fff_surface</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "th" }, {"className": "text-center", "targets": 1, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"ordering": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_3a17abf018974b46960f61a65ecb6b04').DataTable(options);
+
+    const const_data_3a17abf018974b46960f61a65ecb6b04 = table.rows().data();
+
+    const row_tags_3a17abf018974b46960f61a65ecb6b04 = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_3a17abf018974b46960f61a65ecb6b04 = $('#table_3a17abf018974b46960f61a65ecb6b04_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_3a17abf018974b46960f61a65ecb6b04 = document.getElementById('table_3a17abf018974b46960f61a65ecb6b04_wrapper');
+
+    setWidth('3a17abf018974b46960f61a65ecb6b04');
+
+    table_3a17abf018974b46960f61a65ecb6b04.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_3a17abf018974b46960f61a65ecb6b04);
+        table.columns().visible(true);
+
+        $('#table_3a17abf018974b46960f61a65ecb6b04').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_3a17abf018974b46960f61a65ecb6b04.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_3a17abf018974b46960f61a65ecb6b04.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_3a17abf018974b46960f61a65ecb6b04[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('3a17abf018974b46960f61a65ecb6b04');
+    });
+});
+
+</script></div></div></div>
+</div></div>
+</div>
+</div><div  nexus_template="e84d8c7b-9d4b-11f1-93a9-60dd8e2a1669"><a id="TOC_item_tgt_13"></a><br><h2>Solver Settings</h2><div class="container-fluid mx-auto" id="e84d8c7b-9d4b-11f1-93a9-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto"><div class="card-header">
+  <span class="btn-group" role="group">
+      <button type="button" class="tree-expand-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_8416a8d838ed4a0baba0fb34b5b0417f"><i class="fas fa-plus"></i>
+      <button type="button" class="tree-collapse-all btn btn-outline-secondary btn-sm" 
+          data-target-tree="treeroot_8416a8d838ed4a0baba0fb34b5b0417f"><i class="fas fa-minus"></i>
+  </span>
+</div>
+<div style="display:block;overflow-x:auto;white-space:nowrap;"><table id='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='table tree table-bordered table-sm tree-fit table-striped' style='margin:0;border:0;padding:0;'>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-1' data-parent='0' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_8416a8d838ed4a0baba0fb34b5b0417f-1" style='cursor:pointer'></span>Equations</td><td ></td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-2' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-1' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Flow</td><td >True</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-3' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-1' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulence</td><td >True</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-4' data-parent='0' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_8416a8d838ed4a0baba0fb34b5b0417f-4" style='cursor:pointer'></span>Numerics</td><td ></td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-5' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-4' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Absolute Velocity Formulation</td><td >True</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-parent='0' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_8416a8d838ed4a0baba0fb34b5b0417f-6" style='cursor:pointer'></span>Pseudo Time Explicit Relaxation Factors</td><td ></td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-7' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Density</td><td >1</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-8' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Body Forces</td><td >1</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-9' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Kinetic Energy</td><td >0.75</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-10' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Dissipation Rate</td><td >0.75</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-11' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Viscosity</td><td >1</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-12' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Explicit Momentum</td><td >0.5</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-13' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-6' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Explicit Pressure</td><td >0.5</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-14' data-parent='0' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_8416a8d838ed4a0baba0fb34b5b0417f-14" style='cursor:pointer'></span>Pressure-Velocity Coupling</td><td ></td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-15' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-14' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Type</td><td >Coupled</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-16' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-14' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Pseudo Time Method (Global Time Step)</td><td >True</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-17' data-parent='0' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_8416a8d838ed4a0baba0fb34b5b0417f-17" style='cursor:pointer'></span>Discretization Scheme</td><td ></td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-18' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-17' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Pressure</td><td >Second Order</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-19' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-17' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Momentum</td><td >Second Order Upwind</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-20' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-17' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Kinetic Energy</td><td >First Order Upwind</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-21' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-17' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Turbulent Dissipation Rate</td><td >First Order Upwind</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-parent='0' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-parent tree-collapsed' style=''>
+<td><span class='treegrid-indent sub-tree-toggle fas fa-plus mr-1' data-target-node="treenode_8416a8d838ed4a0baba0fb34b5b0417f-22" style='cursor:pointer'></span>Solution Limits</td><td ></td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-23' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Minimum Absolute Pressure [Pa]</td><td >1</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-24' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Maximum Absolute Pressure [Pa]</td><td >5e+10</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-25' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Minimum Static Temperature [K]</td><td >1</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-26' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Maximum Static Temperature [K]</td><td >5000</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-27' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Minimum Turb. Kinetic Energy [m^2/s^2]</td><td >1e-14</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-28' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Minimum Turb. Dissipation Rate [m^2/s^3]</td><td >1e-20</td></tr>
+<tr id='treenode_8416a8d838ed4a0baba0fb34b5b0417f-29' data-parent='treenode_8416a8d838ed4a0baba0fb34b5b0417f-22' data-tree='treeroot_8416a8d838ed4a0baba0fb34b5b0417f' class='tree-row tree-leaf ' style='display: none;'>
+<td><span class="treegrid-indent"></span><span class='treegrid-indent '  style='cursor:pointer'></span>Maximum Turb. Viscosity Ratio</td><td >100000</td></tr>
+</table>
+</div>
+</div></div></div>
+</div></div>
+</div>
+</div><div  nexus_template="e9d73553-9d4b-11f1-a857-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_14"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#e9d73553-9d4b-11f1-a857-60dd8e2a1669_42-card-body"></span>
+<div class="card" id="e9d73553-9d4b-11f1-a857-60dd8e2a1669_42" >
+<div class="card-header"><h2>Run Information</h2></div>
+<div class="card-body" id="e9d73553-9d4b-11f1-a857-60dd8e2a1669_42-card-body" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_ef41ab2a7fa74e1cba38e3e7e5839eb8" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead style="visibility: collapse;">
+  <tr>
+   <th></th>
+   <th></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Number of Machines</th>
+   <td  data-order="1">1</td>
+  </tr>
+  <tr>
+   <th>Number of Cores</th>
+   <td  data-order="1">1</td>
+  </tr>
+  <tr>
+   <th>Case Read</th>
+   <td  data-order="12.236 seconds">12.236 seconds</td>
+  </tr>
+  <tr>
+   <th>Iteration</th>
+   <td  data-order="0.128 seconds">0.128 seconds</td>
+  </tr>
+  <tr>
+   <th>AMG</th>
+   <td  data-order="0.0419996 seconds">0.0419996 seconds</td>
+  </tr>
+  <tr>
+   <th>Virtual Current Memory</th>
+   <td  data-order="0.411934 GB">0.411934 GB</td>
+  </tr>
+  <tr>
+   <th>Virtual Peak Memory</th>
+   <td  data-order="0.733086 GB">0.733086 GB</td>
+  </tr>
+  <tr>
+   <th>Memory Per M Cell</th>
+   <td  data-order="303.927">303.927</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "th" }, {"className": "text-center", "targets": 1, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"ordering": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_ef41ab2a7fa74e1cba38e3e7e5839eb8').DataTable(options);
+
+    const const_data_ef41ab2a7fa74e1cba38e3e7e5839eb8 = table.rows().data();
+
+    const row_tags_ef41ab2a7fa74e1cba38e3e7e5839eb8 = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_ef41ab2a7fa74e1cba38e3e7e5839eb8 = $('#table_ef41ab2a7fa74e1cba38e3e7e5839eb8_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_ef41ab2a7fa74e1cba38e3e7e5839eb8 = document.getElementById('table_ef41ab2a7fa74e1cba38e3e7e5839eb8_wrapper');
+
+    setWidth('ef41ab2a7fa74e1cba38e3e7e5839eb8');
+
+    table_ef41ab2a7fa74e1cba38e3e7e5839eb8.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_ef41ab2a7fa74e1cba38e3e7e5839eb8);
+        table.columns().visible(true);
+
+        $('#table_ef41ab2a7fa74e1cba38e3e7e5839eb8').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_ef41ab2a7fa74e1cba38e3e7e5839eb8.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_ef41ab2a7fa74e1cba38e3e7e5839eb8.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_ef41ab2a7fa74e1cba38e3e7e5839eb8[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('ef41ab2a7fa74e1cba38e3e7e5839eb8');
+    });
+});
+
+</script></div></div></div>
+</div>
+</div><div  nexus_template="ec06f6ec-9d4b-11f1-bfc3-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_15"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#ec06f6ec-9d4b-11f1-bfc3-60dd8e2a1669_43-card-body"></span>
+<div class="card" id="ec06f6ec-9d4b-11f1-bfc3-60dd8e2a1669_43" >
+<div class="card-header"><h2>Solution Status</h2><br /><br /><h4>Iterations: 50</h4></div>
+<div class="card-body" id="ec06f6ec-9d4b-11f1-bfc3-60dd8e2a1669_43-card-body" >
+<div class="row justify-content-center"><div class="col-md-auto"><table id="table_3ba8c5cb28fa47728f21b11d24758462" class="table table-hover table-bordered nowrap table-sm table-fit-head table-fit-body display" style="width: 100%">
+ <br>
+ <thead>
+  <tr>
+   <th></th>
+   <th>Value</th>
+   <th>Absolute Criteria</th>
+   <th>Convergence Status</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>continuity</th>
+   <td  data-order="0.0009895276">0.0009895276</td>
+   <td  data-order="0.001">0.001</td>
+   <td  data-order="Converged">Converged</td>
+  </tr>
+  <tr>
+   <th>x-velocity</th>
+   <td  data-order="9.716555e-06">9.716555e-06</td>
+   <td  data-order="0.001">0.001</td>
+   <td  data-order="Converged">Converged</td>
+  </tr>
+  <tr>
+   <th>y-velocity</th>
+   <td  data-order="4.172584e-06">4.172584e-06</td>
+   <td  data-order="0.001">0.001</td>
+   <td  data-order="Converged">Converged</td>
+  </tr>
+  <tr>
+   <th>k</th>
+   <td  data-order="0.0001740172">0.0001740172</td>
+   <td  data-order="0.001">0.001</td>
+   <td  data-order="Converged">Converged</td>
+  </tr>
+  <tr>
+   <th>epsilon</th>
+   <td  data-order="0.0001954016">0.0001954016</td>
+   <td  data-order="0.001">0.001</td>
+   <td  data-order="Converged">Converged</td>
+  </tr>
+ </tbody>
+</table>
+<script>
+    function setWidth(uuid) {
+    let tableSelector = `#table_${uuid}`;
+    let width = $(tableSelector).css('width');
+
+    $(tableSelector).parents('.dataTables_scroll').css('width', width);
+}
+
+$(document).ready(function () {
+    let data = '"columnDefs": [{"className": "text-center", "targets": 0, "cellType": "th" }, {"className": "text-center", "targets": 1, "cellType": "td" }, {"className": "text-center", "targets": 2, "cellType": "td" }, {"className": "text-center", "targets": 3, "cellType": "td" }, ],"info": false,"orderClasses": false,"searching": false,"scrollX": true,"paging": false,'.replace(/, }/g, ' }').replace(/, ]/g, ' ]').replace(/,$/, '');
+    let options = JSON.parse('{' + data + '}');
+    let table = $('#table_3ba8c5cb28fa47728f21b11d24758462').DataTable(options);
+
+    const const_data_3ba8c5cb28fa47728f21b11d24758462 = table.rows().data();
+
+    const row_tags_3ba8c5cb28fa47728f21b11d24758462 = $.map(table.rows().nodes(), (item) => {
+        let tags = $(item).data('tags');
+        let split = [(tags !== undefined ? tags.split(' ') : [''])];
+        return split.map((tags) => {
+            return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+        });
+    });
+
+    const column_tags_3ba8c5cb28fa47728f21b11d24758462 = $('#table_3ba8c5cb28fa47728f21b11d24758462_wrapper .dataTables_scrollHead thead').find('th')
+            .map((index, elem) => {
+                let tags = $(elem).data('tags');
+                return [(tags !== undefined ? tags.split(' ') : [''])].map((tags) => {
+                    return tags.map((tag) => tag.substring(tag.indexOf('=') + 1));
+                });
+            }).toArray();
+
+    const table_3ba8c5cb28fa47728f21b11d24758462 = document.getElementById('table_3ba8c5cb28fa47728f21b11d24758462_wrapper');
+
+    setWidth('3ba8c5cb28fa47728f21b11d24758462');
+
+    table_3ba8c5cb28fa47728f21b11d24758462.addEventListener('filter_event', function(event) {
+        table.clear();
+        table.rows.add(const_data_3ba8c5cb28fa47728f21b11d24758462);
+        table.columns().visible(true);
+
+        $('#table_3ba8c5cb28fa47728f21b11d24758462').parents('.dataTables_scroll').css('width', '');
+
+        event.detail.forEach((filterDetail, key) => {
+            let hideList = key === 'tag';
+
+            filterDetail.forEach((filterTags, key) => {
+                let columnFilter = false;
+                column_tags_3ba8c5cb28fa47728f21b11d24758462.every((rowTags) => {
+                    return rowTags.every((tag) => {
+                        if (filterTags.includes(tag)) {
+                            columnFilter = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                if (columnFilter) {
+                    column_tags_3ba8c5cb28fa47728f21b11d24758462.forEach((columnTags, index) => {
+                        if (index === 0) {
+                            return;
+                        }
+
+                        let foundTags = columnTags.filter((tag) => filterTags.includes(tag));
+                        if (foundTags.length > 0 === hideList) {
+                            table.column(index).visible(false);
+                        }
+                    });
+                } else {
+                    let rowData = table.rows().data();
+                    rowData = rowData.filter((row, index, data) => {
+                        let hidden = false;
+                        let foundTags = row_tags_3ba8c5cb28fa47728f21b11d24758462[index].filter((rowTag) => filterTags.includes(rowTag));
+                        if (foundTags.length > 0 === hideList) {
+                            hidden = true;
+                        }
+                        return !hidden;
+                    });
+
+                    table.clear();
+                    table.rows.add(rowData);
+                }
+            });
+        });
+
+        table.draw();
+
+        setWidth('3ba8c5cb28fa47728f21b11d24758462');
+    });
+});
+
+</script></div></div></div>
+</div>
+</div><div  nexus_template="f2cdbf14-9d4b-11f1-8a28-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_16"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#f2cdbf14-9d4b-11f1-8a28-60dd8e2a1669_44-card-body"></span>
+<div class="card" id="f2cdbf14-9d4b-11f1-8a28-60dd8e2a1669_44" >
+<div class="card-header"><h2>Plots</h2></div>
+<div class="card-body" id="f2cdbf14-9d4b-11f1-8a28-60dd8e2a1669_44-card-body" >
+<div  nexus_template="f48de5d1-9d4b-11f1-ac44-60dd8e2a1669"><div>
+<ul id="tab_template_45" class="nav nav-tabs" data-tabs="tab_template_45">
+<li class="nav-item"> <a class="nav-link active" href="#tab_template_45_46" data-toggle="tab" role="tab" aria-selected="true" aria-controls="tab_template_45_46">Residuals</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="tab_template_45_46" role="tabpanel">
+<div  nexus_template="f6cf3316-9d4b-11f1-a925-60dd8e2a1669"><br><h2>Residuals</h2><div class="container-fluid mx-auto" id="f6cf3316-9d4b-11f1-a925-60dd8e2a1669" >
+<div class="nexus-plot" id="plot_9a38ac16872e41eea1cae9a261611f49" style=""></div><script>
+ var data_0 = {
+ tags: {
+  },
+  x: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0],
+  y: [1.0, 0.81006675, 0.80627669, 0.712736, 0.65563822, 0.63507928, 0.59185891, 0.5390793, 0.47305778, 0.39655868, 0.34296934, 0.29933855, 0.25111188, 0.21075168, 0.17804507, 0.14907356, 0.13468078, 0.11851363, 0.10572175, 0.09538843, 0.084779546, 0.072610061, 0.061331502, 0.051788679, 0.044409991, 0.038193098, 0.032924016, 0.028152811, 0.024014396, 0.02061188, 0.017744792, 0.015542872, 0.013556087, 0.01164223, 0.0098746549, 0.0083797967, 0.0071693202, 0.006100394, 0.0051758013, 0.0043726511, 0.003700755, 0.003140152, 0.0026803542, 0.0023093453, 0.0020025507, 0.0017456468, 0.0015170559, 0.0013183087, 0.001146046, 0.00098952758],
+  name: 'continuity',  text: ['(1, 1.000000e+00)', '(2, 8.100667e-01)', '(3, 8.062767e-01)', '(4, 7.127360e-01)', '(5, 6.556382e-01)', '(6, 6.350793e-01)', '(7, 5.918589e-01)', '(8, 5.390793e-01)', '(9, 4.730578e-01)', '(10, 3.965587e-01)', '(11, 3.429693e-01)', '(12, 2.993385e-01)', '(13, 2.511119e-01)', '(14, 2.107517e-01)', '(15, 1.780451e-01)', '(16, 1.490736e-01)', '(17, 1.346808e-01)', '(18, 1.185136e-01)', '(19, 1.057218e-01)', '(20, 9.538843e-02)', '(21, 8.477955e-02)', '(22, 7.261006e-02)', '(23, 6.133150e-02)', '(24, 5.178868e-02)', '(25, 4.440999e-02)', '(26, 3.819310e-02)', '(27, 3.292402e-02)', '(28, 2.815281e-02)', '(29, 2.401440e-02)', '(30, 2.061188e-02)', '(31, 1.774479e-02)', '(32, 1.554287e-02)', '(33, 1.355609e-02)', '(34, 1.164223e-02)', '(35, 9.874655e-03)', '(36, 8.379797e-03)', '(37, 7.169320e-03)', '(38, 6.100394e-03)', '(39, 5.175801e-03)', '(40, 4.372651e-03)', '(41, 3.700755e-03)', '(42, 3.140152e-03)', '(43, 2.680354e-03)', '(44, 2.309345e-03)', '(45, 2.002551e-03)', '(46, 1.745647e-03)', '(47, 1.517056e-03)', '(48, 1.318309e-03)', '(49, 1.146046e-03)', '(50, 9.895276e-04)'],
+  hoverinfo: 'text',
+  type: 'scatter',
+  showlegend: true,
+  mode: 'lines',
+  marker: { 
+opacity: 1.0,
+symbol: 'none',
+ },
+  line: {
+dash: 'solid',
+ },
+ };
+ var data_1 = {
+ tags: {
+  },
+  x: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0],
+  y: [0.027257211, 0.015327962, 0.0097753345, 0.0073351876, 0.0058989463, 0.0051120052, 0.0044975756, 0.0038738323, 0.0033535516, 0.0029380807, 0.0025887244, 0.0022940646, 0.0019785063, 0.0017589217, 0.0015300632, 0.0013400633, 0.0011706437, 0.0010463708, 0.00095467554, 0.0008667694, 0.00078032035, 0.00070078708, 0.00062692894, 0.00055836056, 0.00049581693, 0.00044186234, 0.00038917391, 0.00033796416, 0.00029261043, 0.00025067054, 0.00021231745, 0.0001788318, 0.00015054801, 0.00012570764, 0.00010401111, 8.6040796e-05, 7.1213806e-05, 5.8999567e-05, 4.8914038e-05, 4.0445029e-05, 3.3275748e-05, 2.767637e-05, 2.3406058e-05, 1.9894403e-05, 1.6922029e-05, 1.4671278e-05, 1.3165335e-05, 1.18885e-05, 1.0764362e-05, 9.7165547e-06],
+  name: 'x-velocity',  text: ['(1, 2.725721e-02)', '(2, 1.532796e-02)', '(3, 9.775334e-03)', '(4, 7.335188e-03)', '(5, 5.898946e-03)', '(6, 5.112005e-03)', '(7, 4.497576e-03)', '(8, 3.873832e-03)', '(9, 3.353552e-03)', '(10, 2.938081e-03)', '(11, 2.588724e-03)', '(12, 2.294065e-03)', '(13, 1.978506e-03)', '(14, 1.758922e-03)', '(15, 1.530063e-03)', '(16, 1.340063e-03)', '(17, 1.170644e-03)', '(18, 1.046371e-03)', '(19, 9.546755e-04)', '(20, 8.667694e-04)', '(21, 7.803204e-04)', '(22, 7.007871e-04)', '(23, 6.269289e-04)', '(24, 5.583606e-04)', '(25, 4.958169e-04)', '(26, 4.418623e-04)', '(27, 3.891739e-04)', '(28, 3.379642e-04)', '(29, 2.926104e-04)', '(30, 2.506705e-04)', '(31, 2.123174e-04)', '(32, 1.788318e-04)', '(33, 1.505480e-04)', '(34, 1.257076e-04)', '(35, 1.040111e-04)', '(36, 8.604080e-05)', '(37, 7.121381e-05)', '(38, 5.899957e-05)', '(39, 4.891404e-05)', '(40, 4.044503e-05)', '(41, 3.327575e-05)', '(42, 2.767637e-05)', '(43, 2.340606e-05)', '(44, 1.989440e-05)', '(45, 1.692203e-05)', '(46, 1.467128e-05)', '(47, 1.316533e-05)', '(48, 1.188850e-05)', '(49, 1.076436e-05)', '(50, 9.716555e-06)'],
+  hoverinfo: 'text',
+  type: 'scatter',
+  showlegend: true,
+  mode: 'lines',
+  marker: { 
+opacity: 1.0,
+symbol: 'none',
+ },
+  line: {
+dash: 'solid',
+ },
+ };
+ var data_2 = {
+ tags: {
+  },
+  x: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0],
+  y: [0.025778974, 0.013981159, 0.0080167421, 0.0048304769, 0.0029520098, 0.0022253827, 0.0018554505, 0.0016378331, 0.0014273265, 0.0012313047, 0.001099446, 0.00099358625, 0.00085766935, 0.00076832198, 0.0006473117, 0.00051167342, 0.00039701749, 0.00032499653, 0.00027539194, 0.00024377102, 0.00021465439, 0.0001875476, 0.00016371366, 0.00014933119, 0.00013847964, 0.00012999219, 0.00012074798, 0.00011222447, 0.00010241648, 9.2492947e-05, 7.9922066e-05, 6.9043151e-05, 5.9512035e-05, 5.1118845e-05, 4.3724721e-05, 3.7569786e-05, 3.2593604e-05, 2.8134433e-05, 2.4139095e-05, 2.0661767e-05, 1.7661886e-05, 1.5147777e-05, 1.2930118e-05, 1.1031884e-05, 9.3612968e-06, 7.9294859e-06, 6.7330062e-06, 5.7260845e-06, 4.8824202e-06, 4.1725838e-06],
+  name: 'y-velocity',  text: ['(1, 2.577897e-02)', '(2, 1.398116e-02)', '(3, 8.016742e-03)', '(4, 4.830477e-03)', '(5, 2.952010e-03)', '(6, 2.225383e-03)', '(7, 1.855450e-03)', '(8, 1.637833e-03)', '(9, 1.427326e-03)', '(10, 1.231305e-03)', '(11, 1.099446e-03)', '(12, 9.935862e-04)', '(13, 8.576694e-04)', '(14, 7.683220e-04)', '(15, 6.473117e-04)', '(16, 5.116734e-04)', '(17, 3.970175e-04)', '(18, 3.249965e-04)', '(19, 2.753919e-04)', '(20, 2.437710e-04)', '(21, 2.146544e-04)', '(22, 1.875476e-04)', '(23, 1.637137e-04)', '(24, 1.493312e-04)', '(25, 1.384796e-04)', '(26, 1.299922e-04)', '(27, 1.207480e-04)', '(28, 1.122245e-04)', '(29, 1.024165e-04)', '(30, 9.249295e-05)', '(31, 7.992207e-05)', '(32, 6.904315e-05)', '(33, 5.951203e-05)', '(34, 5.111884e-05)', '(35, 4.372472e-05)', '(36, 3.756979e-05)', '(37, 3.259360e-05)', '(38, 2.813443e-05)', '(39, 2.413910e-05)', '(40, 2.066177e-05)', '(41, 1.766189e-05)', '(42, 1.514778e-05)', '(43, 1.293012e-05)', '(44, 1.103188e-05)', '(45, 9.361297e-06)', '(46, 7.929486e-06)', '(47, 6.733006e-06)', '(48, 5.726085e-06)', '(49, 4.882420e-06)', '(50, 4.172584e-06)'],
+  hoverinfo: 'text',
+  type: 'scatter',
+  showlegend: true,
+  mode: 'lines',
+  marker: { 
+opacity: 1.0,
+symbol: 'none',
+ },
+  line: {
+dash: 'solid',
+ },
+ };
+ var data_3 = {
+ tags: {
+  },
+  x: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0],
+  y: [0.36696151, 0.26263655, 0.12956884, 0.051839744, 0.035113785, 0.032599451, 0.031157866, 0.029018178, 0.026407865, 0.023873594, 0.023039895, 0.024464547, 0.024566951, 0.022829745, 0.020121567, 0.016882012, 0.014216163, 0.012188579, 0.011201825, 0.010375809, 0.0095691018, 0.0088504454, 0.0083193015, 0.0077576639, 0.0071642679, 0.00654146, 0.005922082, 0.0053038734, 0.0046846919, 0.0040875402, 0.0035206665, 0.0030141247, 0.0025666422, 0.002178713, 0.0018460663, 0.0015628345, 0.0013231272, 0.0011208335, 0.00095044911, 0.00080635732, 0.0006850818, 0.00058317035, 0.00049745088, 0.00042530292, 0.00036448099, 0.00031303338, 0.00026948003, 0.00023249807, 0.00020097455, 0.0001740172],
+  name: 'k',  text: ['(1, 3.669615e-01)', '(2, 2.626366e-01)', '(3, 1.295688e-01)', '(4, 5.183974e-02)', '(5, 3.511379e-02)', '(6, 3.259945e-02)', '(7, 3.115787e-02)', '(8, 2.901818e-02)', '(9, 2.640786e-02)', '(10, 2.387359e-02)', '(11, 2.303990e-02)', '(12, 2.446455e-02)', '(13, 2.456695e-02)', '(14, 2.282974e-02)', '(15, 2.012157e-02)', '(16, 1.688201e-02)', '(17, 1.421616e-02)', '(18, 1.218858e-02)', '(19, 1.120183e-02)', '(20, 1.037581e-02)', '(21, 9.569102e-03)', '(22, 8.850445e-03)', '(23, 8.319301e-03)', '(24, 7.757664e-03)', '(25, 7.164268e-03)', '(26, 6.541460e-03)', '(27, 5.922082e-03)', '(28, 5.303873e-03)', '(29, 4.684692e-03)', '(30, 4.087540e-03)', '(31, 3.520667e-03)', '(32, 3.014125e-03)', '(33, 2.566642e-03)', '(34, 2.178713e-03)', '(35, 1.846066e-03)', '(36, 1.562835e-03)', '(37, 1.323127e-03)', '(38, 1.120834e-03)', '(39, 9.504491e-04)', '(40, 8.063573e-04)', '(41, 6.850818e-04)', '(42, 5.831704e-04)', '(43, 4.974509e-04)', '(44, 4.253029e-04)', '(45, 3.644810e-04)', '(46, 3.130334e-04)', '(47, 2.694800e-04)', '(48, 2.324981e-04)', '(49, 2.009746e-04)', '(50, 1.740172e-04)'],
+  hoverinfo: 'text',
+  type: 'scatter',
+  showlegend: true,
+  mode: 'lines',
+  marker: { 
+opacity: 1.0,
+symbol: 'none',
+ },
+  line: {
+dash: 'solid',
+ },
+ };
+ var data_4 = {
+ tags: {
+  },
+  x: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0],
+  y: [0.37259882, 0.35309105, 0.29808367, 0.20569825, 0.12106083, 0.08148919, 0.058589897, 0.044566186, 0.036689247, 0.033306474, 0.037060466, 0.044698126, 0.046471963, 0.041532182, 0.033349507, 0.024855663, 0.018580525, 0.014835023, 0.013598234, 0.01246724, 0.011166717, 0.0098756386, 0.0087424636, 0.0077769237, 0.0071379849, 0.0065679387, 0.0060645708, 0.0055229107, 0.0049753074, 0.004404677, 0.003812855, 0.003262555, 0.0027668501, 0.0023395443, 0.0019790426, 0.0016735057, 0.0014174619, 0.001203012, 0.0010213343, 0.00086647938, 0.00073654189, 0.00062929122, 0.0005391819, 0.00046332861, 0.00039917067, 0.00034471085, 0.00029833469, 0.0002586868, 0.00022467459, 0.00019540157],
+  name: 'epsilon',  text: ['(1, 3.725988e-01)', '(2, 3.530911e-01)', '(3, 2.980837e-01)', '(4, 2.056982e-01)', '(5, 1.210608e-01)', '(6, 8.148919e-02)', '(7, 5.858990e-02)', '(8, 4.456619e-02)', '(9, 3.668925e-02)', '(10, 3.330647e-02)', '(11, 3.706047e-02)', '(12, 4.469813e-02)', '(13, 4.647196e-02)', '(14, 4.153218e-02)', '(15, 3.334951e-02)', '(16, 2.485566e-02)', '(17, 1.858053e-02)', '(18, 1.483502e-02)', '(19, 1.359823e-02)', '(20, 1.246724e-02)', '(21, 1.116672e-02)', '(22, 9.875639e-03)', '(23, 8.742464e-03)', '(24, 7.776924e-03)', '(25, 7.137985e-03)', '(26, 6.567939e-03)', '(27, 6.064571e-03)', '(28, 5.522911e-03)', '(29, 4.975307e-03)', '(30, 4.404677e-03)', '(31, 3.812855e-03)', '(32, 3.262555e-03)', '(33, 2.766850e-03)', '(34, 2.339544e-03)', '(35, 1.979043e-03)', '(36, 1.673506e-03)', '(37, 1.417462e-03)', '(38, 1.203012e-03)', '(39, 1.021334e-03)', '(40, 8.664794e-04)', '(41, 7.365419e-04)', '(42, 6.292912e-04)', '(43, 5.391819e-04)', '(44, 4.633286e-04)', '(45, 3.991707e-04)', '(46, 3.447108e-04)', '(47, 2.983347e-04)', '(48, 2.586868e-04)', '(49, 2.246746e-04)', '(50, 1.954016e-04)'],
+  hoverinfo: 'text',
+  type: 'scatter',
+  showlegend: true,
+  mode: 'lines',
+  marker: { 
+opacity: 1.0,
+symbol: 'none',
+ },
+  line: {
+dash: 'solid',
+ },
+ };
+var data_9a38ac16872e41eea1cae9a261611f49 = [data_0,data_1,data_2,data_3,data_4,];
+var const_data_9a38ac16872e41eea1cae9a261611f49 = JSON.parse(JSON.stringify(data_9a38ac16872e41eea1cae9a261611f49));
+ var layout = {
+   font: {color: "#2a3f5f"},
+   paper_bgcolor: "white",
+   plot_bgcolor: "white",
+   title: 'Residuals',
+margin: { },
+   xaxis: {
+     zeroline: true,
+     gridcolor: "#EBF0F8",
+     zerolinecolor: "#EBF0F8",
+     mirror: true, showline: true,
+     linecolor: "#EBF0F8",
+     title: 'Iterations',
+     tickformat: '.0f',
+     autorange: true, 
+   },
+   yaxis: {
+     zeroline: true,
+     gridcolor: "#EBF0F8",
+     zerolinecolor: "#EBF0F8",
+     mirror: true, showline: true,
+     linecolor: "#EBF0F8",
+     title: 'Residuals',
+     tickformat: '.2e',
+     autorange: true, 
+     type: 'log',
+   },
+     hovermode: 'closest',
+  showlegend: true,
+   legend: {
+   },
+ };
+ var options = {
+    showLink: false,
+    displaylogo: false, 
+    modeBarButtonsToRemove: ['sendDataToCloud', 'select2d', 'lasso2d'], 
+ };
+ pobj_9a38ac16872e41eea1cae9a261611f49 = document.getElementById('plot_9a38ac16872e41eea1cae9a261611f49');
+ Plotly.newPlot( pobj_9a38ac16872e41eea1cae9a261611f49, data_9a38ac16872e41eea1cae9a261611f49, layout, options);
+ window.addEventListener('resize', function() { Plotly.Plots.resize(pobj_9a38ac16872e41eea1cae9a261611f49);});
+ pobj_9a38ac16872e41eea1cae9a261611f49.addEventListener('filter_event', function(event) {
+   for (let [key, value] of Object.entries(const_data_9a38ac16872e41eea1cae9a261611f49)) {
+     data_9a38ac16872e41eea1cae9a261611f49[key] = JSON.parse(JSON.stringify(value));
+   };
+   event.detail.forEach((filterDetail, key) => {
+     let tempData;
+     switch (key) {
+       case 'plot_range_x':
+         filterDetail.forEach((rangeObject, key) => {
+           tempData = JSON.parse(JSON.stringify(data_9a38ac16872e41eea1cae9a261611f49));
+           tempData.forEach((trace, index) => {
+             let min = rangeObject.min;
+             let max = rangeObject.max;
+             data_9a38ac16872e41eea1cae9a261611f49[index]['x'] = trace['x'].filter((value) => value >= min && value <= max);
+             data_9a38ac16872e41eea1cae9a261611f49[index]['y'] = trace['y'].filter((value, index) => trace['x'][index] >= min && trace['x'][index] <= max);
+           });
+         });
+         break;
+       case 'plot_range_y':
+         filterDetail.forEach((rangeObject, key) => {
+           tempData = JSON.parse(JSON.stringify(data_9a38ac16872e41eea1cae9a261611f49));
+           tempData.forEach((trace, index) => {
+             let min = rangeObject.min;
+             let max = rangeObject.max;
+             data_9a38ac16872e41eea1cae9a261611f49[index]['y'] = trace['y'].filter((value) => value >= min && value <= max);
+             data_9a38ac16872e41eea1cae9a261611f49[index]['x'] = trace['x'].filter((value, index) => trace['y'][index] >= min && trace['y'][index] <= max);
+           });
+         });
+         break;
+       case 'tag':
+         filterDetail.forEach((hiddenTags, key) => {
+           if (hiddenTags.min !== undefined) {
+             data_9a38ac16872e41eea1cae9a261611f49.forEach((trace, index) => {
+               if (trace.tags[key] < hiddenTags.min || trace.tags[key] > hiddenTags.max) {
+                 trace.visible = 'hidden';
+                 data_9a38ac16872e41eea1cae9a261611f49[index]['x'] = [];
+                 data_9a38ac16872e41eea1cae9a261611f49[index]['y'] = [];
+               }
+             });
+           } else if (key === 'Other tags') {
+             hiddenTags.forEach((hiddenTag) => {
+               data_9a38ac16872e41eea1cae9a261611f49.forEach((trace, index) => {
+                 if (trace.visible !== 'hidden' && trace.tags[hiddenTag] === 'True') {
+                   trace.visible = 'hidden';
+                   data_9a38ac16872e41eea1cae9a261611f49[index]['x'] = [];
+                   data_9a38ac16872e41eea1cae9a261611f49[index]['y'] = [];
+                 }
+               });
+             });
+           } else {
+             data_9a38ac16872e41eea1cae9a261611f49.forEach((trace, index) => {
+               Object.entries(trace.tags).forEach(([tagKey,tagValue]) => {
+                 if (tagValue === 'True') {
+                   trace.tags[tagKey] = tagKey;
+                 }
+               });
+               if (hiddenTags.includes(trace.tags[key])) {
+                 trace.visible = 'hidden';
+                 data_9a38ac16872e41eea1cae9a261611f49[index]['x'] = [];
+                 data_9a38ac16872e41eea1cae9a261611f49[index]['y'] = [];
+               }
+             });
+           }
+         });
+         break;
+       case 'single-tag':
+         filterDetail.forEach((tags, key) => {
+           if (tags.length) {
+             let shownTag = tags[0];
+             data_9a38ac16872e41eea1cae9a261611f49.forEach((trace, index) => {
+               let tagIsDefined = trace.tags[key] !== undefined;
+               if (!(tagIsDefined && trace.tags[key].includes(shownTag) ||                   trace.tags[shownTag] === 'True')) {
+                 trace.visible = 'hidden';
+                 data_9a38ac16872e41eea1cae9a261611f49[index]['x'] = [];
+                 data_9a38ac16872e41eea1cae9a261611f49[index]['y'] = [];
+               }
+             });
+           }
+         });
+         break;
+     }
+   });
+   Plotly.redraw(pobj_9a38ac16872e41eea1cae9a261611f49);
+ });
+ $(document).ready(function() { Plotly.Plots.resize(pobj_9a38ac16872e41eea1cae9a261611f49); });
+</script>
+</div>
+</div></div>
+</div>
+</div>
+<script>
+$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+ window.dispatchEvent(new Event('resize'));
+});
+</script>
+</div></div>
+</div>
+</div><div  nexus_template="fd9b2a73-9d4b-11f1-b386-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_17"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#fd9b2a73-9d4b-11f1-b386-60dd8e2a1669_47-card-body"></span>
+<div class="card" id="fd9b2a73-9d4b-11f1-b386-60dd8e2a1669_47" >
+<div class="card-header"><h2>Contours</h2></div>
+<div class="card-body" id="fd9b2a73-9d4b-11f1-b386-60dd8e2a1669_47-card-body" >
+<div  nexus_template="ff7c9c72-9d4b-11f1-888b-60dd8e2a1669"><div>
+<ul id="tab_template_48" class="nav nav-tabs" data-tabs="tab_template_48">
+<li class="nav-item"> <a class="nav-link active" href="#tab_template_48_49" data-toggle="tab" role="tab" aria-selected="true" aria-controls="tab_template_48_49">velocity_contour</a></li>
+<li class="nav-item"> <a class="nav-link " href="#tab_template_48_50" data-toggle="tab" role="tab" aria-selected="false" aria-controls="tab_template_48_50">pressure_contour</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="tab_template_48_49" role="tabpanel">
+<div  nexus_template="01dc7b78-9d4c-11f1-9ef5-60dd8e2a1669"><br><h2>velocity_contour</h2><div class="container-fluid mx-auto" id="01dc7b78-9d4c-11f1-9ef5-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto">
+
+    <img src="./media/ba21fb86-9d4b-11f1-876f-60dd8e2a1669_image.png"
+            
+                class="img-fluid" style="margin: 0 auto; display:flex; justify-content:center;" 
+            
+         alt="Image file not found">
+</div></div></div>
+</div></div>
+<div class="tab-pane" id="tab_template_48_50" role="tabpanel">
+<div  nexus_template="04ea067c-9d4c-11f1-8f40-60dd8e2a1669"><br><h2>pressure_contour</h2><div class="container-fluid mx-auto" id="04ea067c-9d4c-11f1-8f40-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto">
+
+    <img src="./media/bfca241f-9d4b-11f1-a6a2-60dd8e2a1669_image.png"
+            
+                class="img-fluid" style="margin: 0 auto; display:flex; justify-content:center;" 
+            
+         alt="Image file not found">
+</div></div></div>
+</div></div>
+</div>
+</div>
+<script>
+$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+ window.dispatchEvent(new Event('resize'));
+});
+</script>
+</div></div>
+</div>
+</div><div  nexus_template="074d6810-9d4c-11f1-a4a0-60dd8e2a1669" style=" page-break-inside: avoid;"><a id="TOC_item_tgt_18"></a><br><span class="panel-expander fas fa-minus" data-target-panel="#074d6810-9d4c-11f1-a4a0-60dd8e2a1669_51-card-body"></span>
+<div class="card" id="074d6810-9d4c-11f1-a4a0-60dd8e2a1669_51" >
+<div class="card-header"><h2>Vectors</h2></div>
+<div class="card-body" id="074d6810-9d4c-11f1-a4a0-60dd8e2a1669_51-card-body" >
+<div  nexus_template="094a4e89-9d4c-11f1-8fa4-60dd8e2a1669"><div>
+<ul id="tab_template_52" class="nav nav-tabs" data-tabs="tab_template_52">
+<li class="nav-item"> <a class="nav-link active" href="#tab_template_52_53" data-toggle="tab" role="tab" aria-selected="true" aria-controls="tab_template_52_53">pressure_vector</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="tab_template_52_53" role="tabpanel">
+<div  nexus_template="0ba98d5a-9d4c-11f1-97ca-60dd8e2a1669"><br><h2>pressure_vector</h2><div class="container-fluid mx-auto" id="0ba98d5a-9d4c-11f1-97ca-60dd8e2a1669" >
+<div class="row justify-content-center"><div class="col-md-auto">
+
+    <img src="./media/c27a9399-9d4b-11f1-a397-60dd8e2a1669_image.png"
+            
+                class="img-fluid" style="margin: 0 auto; display:flex; justify-content:center;" 
+            
+         alt="Image file not found">
+</div></div></div>
+</div></div>
+</div>
+</div>
+<script>
+$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+ window.dispatchEvent(new Event('resize'));
+});
+</script>
+</div></div>
+</div>
+</div></div>
+</div><style>
+.toc_root {list-style-type: none;}
+.toc_0 {text-indent: 0pt;}
+.toc_1 {text-indent: 15pt;}
+.toc_2 {text-indent: 30pt;}
+.toc_3 {text-indent: 45pt;}
+.toc_4 {text-indent: 60pt;}
+.toc_5 {text-indent: 75pt;}
+.toc_6 {text-indent: 90pt;}
+</style>
+<script type='text/javascript'>
+$(document).ready(function() {
+ var figtmp = '<ul class="toc_root"></ul>';
+ var tabtmp = '<ul class="toc_root"></ul>';
+ var itmtmp = '<ul class="toc_root"><li class="toc_0"><a href="#TOC_item_tgt_1">1 System Information</a></li><li class="toc_0"><a href="#TOC_item_tgt_2">2 Geometry and Mesh</a></li><li class="toc_1"><a href="#TOC_item_tgt_3">2.1 Mesh Size</a></li><li class="toc_1"><a href="#TOC_item_tgt_4">2.2 Mesh Quality</a></li><li class="toc_1"><a href="#TOC_item_tgt_5">2.3 Orthogonal Quality</a></li><li class="toc_0"><a href="#TOC_item_tgt_6">3 Simulation Setup</a></li><li class="toc_1"><a href="#TOC_item_tgt_7">3.1 Physics</a></li><li class="toc_2"><a href="#TOC_item_tgt_8">3.1.1 Models</a></li><li class="toc_2"><a href="#TOC_item_tgt_9">3.1.2 Material Properties</a></li><li class="toc_2"><a href="#TOC_item_tgt_10">3.1.3 Cell Zone Conditions</a></li><li class="toc_2"><a href="#TOC_item_tgt_11">3.1.4 Boundary Conditions</a></li><li class="toc_2"><a href="#TOC_item_tgt_12">3.1.5 Reference Values</a></li><li class="toc_1"><a href="#TOC_item_tgt_13">3.2 Solver Settings</a></li><li class="toc_0"><a href="#TOC_item_tgt_14">4 Run Information</a></li><li class="toc_0"><a href="#TOC_item_tgt_15">5 Solution Status</a></li><li class="toc_0"><a href="#TOC_item_tgt_16">6 Plots</a></li><li class="toc_0"><a href="#TOC_item_tgt_17">7 Contours</a></li><li class="toc_0"><a href="#TOC_item_tgt_18">8 Vectors</a></li></ul>';
+ document.getElementById('TOC_item_list_37').innerHTML = itmtmp;
+});
+</script>
+
+    </div>
+
+    
+</div>
+
+<a href="#" id="return_to_top"><i class="fas fa-chevron-up fa-2x"></i></a>
+
+<script src="./media/hotkey.min.js"></script>
+<script src="./media/moment.min.js"></script>
+<script src="./media/bootstrap.min.js"></script>
+<script src="./media/bootstrap-select.js"></script>
+<script src="./media/bootstrap-tagsinput.js"></script>
+<script src="./media/jquery.loading.min.js"></script>
+<script src="./media/noty.min.js"></script>
+<script src="./media/js_cookie.min.js"></script>
+<script>
+    let denyNewTab = false;
+</script>
+<script src="./media/base.js"></script>
+
+    <script src="./media/bootstrap-slider.min.js"></script>
+    <script src="./media/panzoom.min.js"></script>
+    <script src="./media/report_item.js"></script>
+    <script src="./media/report_display.js"></script>
+
+</body>
+</html>
