@@ -1,0 +1,46 @@
+/COM,ANSYS RELEASE 2024 R1           BUILD 24.1      UP20231106       19:28:17
+
+ *** WARNING ***                         CP =       0.531   TIME= 19:28:17
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.547   TIME= 19:28:17
+ Material number 2 (used by element 16) should normally have at least    
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 21.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 17.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 18.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 22.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 23.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 19.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 24.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 20.                       
+
+ *** WARNING ***                         CP =       0.688   TIME= 19:28:18
+ A boundary condition has been applied on 1 degrees of freedom of the    
+ node belonging to the FOLLW201 element number 16.                       

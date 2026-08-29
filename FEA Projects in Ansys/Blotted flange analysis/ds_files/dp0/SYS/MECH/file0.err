@@ -1,0 +1,21 @@
+/COM,ANSYS RELEASE 2024 R1           BUILD 24.1      UP20231106       17:49:00
+
+ *** WARNING ***                         CP =       2.234   TIME= 17:49:01
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       2.531   TIME= 17:49:02
+ Material number 19 (used by element 30540) should normally have at      
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** WARNING ***                         CP =      15.734   TIME= 17:49:13
+ The PCG solver detects that the out of balance force goes to            
+ infinity.The solution has not converged.  Please check for rigid body   
+ motions in your model.                                                  
+                                                                         
+
+ *** ERROR ***                           CP =      18.531   TIME= 17:49:16
+ There is at least 1 small equation solver pivot term (e.g., at the UX   
+ degree of freedom of node 29332).  Please check for an insufficiently   
+ constrained model.                                                      
