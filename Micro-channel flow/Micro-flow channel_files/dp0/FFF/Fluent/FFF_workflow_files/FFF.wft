@@ -1,0 +1,274 @@
+{
+    "workflow": {
+        "version": "24.1",
+        "ROOT": {
+            "TaskObject:TaskObject1": {
+                "Arguments": {
+                    "FileName": "C:\\Engineering Portifolio\\Micro-channel flow\\Micro-channel flow.dsco",
+                    "ImportCadPreferences": {
+                        "MaxFacetLength": "0"
+                    },
+                    "LengthUnit": "nm",
+                    "NumParts": "1"
+                },
+                "CommandName": "ImportGeometry",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "Warnings": "__________None",
+                "_name_": "Import Geometry"
+            },
+            "TaskObject:TaskObject2": {
+                "Arguments": {
+                    "AddChild": "yes"
+                },
+                "CommandName": "AddLocalSizingWTM",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskList": [
+                    "TaskObject12",
+                    "TaskObject13"
+                ],
+                "TaskType": "Compound",
+                "Warnings": "__________None",
+                "_name_": "Add Local Sizing"
+            },
+            "TaskObject:TaskObject3": {
+                "Arguments": {
+                    "ExecuteShareTopology": "No",
+                    "OriginalZones": [
+                        "outlet",
+                        "inlet",
+                        "wall-outer",
+                        "wall-inner",
+                        "wall_pillar"
+                    ]
+                },
+                "CommandName": "GenerateTheSurfaceMeshWTM",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "Warnings": "__________None",
+                "_name_": "Generate the Surface Mesh"
+            },
+            "TaskObject:TaskObject4": {
+                "Arguments": {
+                    "NonConformal": "No",
+                    "OldZoneList": [
+                        "outlet",
+                        "inlet"
+                    ],
+                    "SetupType": "The geometry consists of only fluid regions with no voids"
+                },
+                "CommandName": "GeometrySetup",
+                "Errors": "__________None",
+                "InactiveTaskList": [
+                    "TaskObject5",
+                    "TaskObject6",
+                    "TaskObject8"
+                ],
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskList": [
+                    "TaskObject7"
+                ],
+                "TaskType": "Conditional",
+                "Warnings": "__________None",
+                "_name_": "Describe Geometry"
+            },
+            "TaskObject:TaskObject5": {
+                "Arguments": "",
+                "CommandName": "ShareTopology",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "Warnings": "__________None",
+                "_name_": "Apply Share Topology"
+            },
+            "TaskObject:TaskObject6": {
+                "Arguments": "",
+                "CommandName": "Capping",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound",
+                "Warnings": "__________None",
+                "_name_": "Enclose Fluid Regions (Capping)"
+            },
+            "TaskObject:TaskObject7": {
+                "Arguments": "",
+                "CommandName": "UpdateBoundaries",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "Warnings": "__________None",
+                "_name_": "Update Boundaries"
+            },
+            "TaskObject:TaskObject8": {
+                "Arguments": "",
+                "CommandName": "CreateRegions",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "Warnings": "__________None",
+                "_name_": "Create Regions"
+            },
+            "TaskObject:TaskObject9": {
+                "Arguments": "",
+                "CommandName": "UpdateRegions",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "Warnings": "__________None",
+                "_name_": "Update Regions"
+            },
+            "TaskObject:TaskObject10": {
+                "Arguments": "",
+                "CommandName": "AddBoundaryLayers",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskList": [
+                    "TaskObject14"
+                ],
+                "TaskType": "Compound",
+                "Warnings": "__________None",
+                "_name_": "Add Boundary Layers"
+            },
+            "TaskObject:TaskObject11": {
+                "Arguments": {
+                    "VolumeFill": "polyhedra"
+                },
+                "CommandName": "GenerateTheVolumeMeshWTM",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "Warnings": "__________None",
+                "_name_": "Generate the Volume Mesh"
+            },
+            "TaskObject:TaskObject12": {
+                "Arguments": {
+                    "AddChild": "yes",
+                    "BOICellsPerGap": "1",
+                    "BOIControlName": "body-sizing",
+                    "BOICurvatureNormalAngle": "18",
+                    "BOIExecution": "Face Size",
+                    "BOIFaceLabelList": [
+                        "inlet",
+                        "outlet",
+                        "wall-inner",
+                        "wall-outer"
+                    ],
+                    "BOIGrowthRate": "1.2",
+                    "BOISize": "10",
+                    "BOIZoneorLabel": "label",
+                    "CompleteFaceLabelList": [
+                        "inlet",
+                        "outlet",
+                        "wall-inner",
+                        "wall-outer"
+                    ]
+                },
+                "CommandName": "AddLocalSizingWTM",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound Child",
+                "Warnings": "__________None",
+                "_name_": "body-sizing"
+            },
+            "TaskObject:TaskObject13": {
+                "Arguments": {
+                    "AddChild": "yes",
+                    "BOICellsPerGap": "1",
+                    "BOIControlName": "obstr-sizing",
+                    "BOICurvatureNormalAngle": "18",
+                    "BOIExecution": "Face Size",
+                    "BOIFaceLabelList": [
+                        "wall_pillar"
+                    ],
+                    "BOIGrowthRate": "1.2",
+                    "BOISize": "1",
+                    "BOIZoneorLabel": "label",
+                    "CompleteFaceLabelList": [
+                        "wall_pillar"
+                    ]
+                },
+                "CommandName": "AddLocalSizingWTM",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound Child",
+                "Warnings": "__________None",
+                "_name_": "obstr-sizing"
+            },
+            "TaskObject:TaskObject14": {
+                "Arguments": {
+                    "BLControlName": "boundary-sizing",
+                    "BLRegionList": [
+                        "micro-channel-flow-solid"
+                    ],
+                    "BLZoneList": [
+                        "wall_pillar",
+                        "wall-inner",
+                        "wall-outer"
+                    ],
+                    "LocalPrismPreferences": {
+                        "Continuous": "Continuous"
+                    },
+                    "NumberOfLayers": "5"
+                },
+                "CommandName": "AddBoundaryLayers",
+                "Errors": "__________None",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound Child",
+                "Warnings": "__________None",
+                "_name_": "boundary-sizing"
+            },
+            "Workflow": {
+                "CurrentTask": "TaskObject11",
+                "TaskList": [
+                    "TaskObject1",
+                    "TaskObject2",
+                    "TaskObject3",
+                    "TaskObject4",
+                    "TaskObject9",
+                    "TaskObject10",
+                    "TaskObject11"
+                ]
+            }
+        }
+    },
+    "meshing": {
+        "version": "24.1",
+        "ROOT": {
+            "GlobalSettings": {
+                "AreaUnit": "nm^2",
+                "EnableCleanCAD": "true",
+                "EnableComplexMeshing": "false",
+                "InitialVersion": "24.1",
+                "LengthUnit": "nm",
+                "NormalMode": "false",
+                "VolumeUnit": "nm^3"
+            }
+        }
+    },
+    "PartManagement": {
+        "version": "24.1",
+        "ROOT": {
+            "Node:Node1": {
+                "Name": "Meshing Model",
+                "_name_": "Meshing Model"
+            }
+        }
+    }
+}
