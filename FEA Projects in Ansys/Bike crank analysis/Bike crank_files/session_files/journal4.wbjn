@@ -1,0 +1,47 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+system1 = GetSystem(Name="SYS")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.CreateMaterial(Name="Alumi")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.DisplayName = "A"
+material1.Delete()
+matl1.DisplayName = "Aluminium"
+matl1.DisplayName = "Al 6061 T6"
+matlProp1 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["10000000 [Pa]"]])
+matlProp1.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.33"]])
+favorites1 = EngData.LoadFavoriteItems()
+matl2 = engineeringData1.ImportMaterial(
+    Name="Structural Steel",
+    Source="General_Materials.xml")
+modelComponent1.Refresh()
+Save(Overwrite=True)
+Archive(
+    FilePath="C:/Users/Hp/Downloads/Cornell university course/Finite Element Analysis/Module 2/Big ideas/Bike crank/Problem/Geometry/Bike_Crank.wbpz",
+    IncludeExternalImportedFiles=True)
+model1.Exit()
+model1.Edit()
+Save(Overwrite=True)
+Archive(
+    FilePath="C:/Users/Hp/Downloads/Cornell university course/Finite Element Analysis/Module 2/Big ideas/Bike crank/Problem/Geometry/Bike_Crank.wbpz",
+    IncludeExternalImportedFiles=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
